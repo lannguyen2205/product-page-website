@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import PromotionSlider from "./components/Promotion/PromotionSlider/PromotionSlider";
+import "./main.scss";
+import HomePage from "./pages/Home/HomePage";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <HomePage />
     </div>
   );
 }

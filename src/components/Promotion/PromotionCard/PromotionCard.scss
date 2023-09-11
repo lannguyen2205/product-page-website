@@ -1,0 +1,165 @@
+.promotion-card__container {
+  width: fit-content;
+  padding: 1.25rem;
+
+  .promotion-card {
+    position: relative;
+    width: 25.063rem;
+    transition: transform 0.3s ease, transform-origin 0.3s ease;
+    cursor: pointer;
+    color: var(--text-color);
+
+    &__img-box {
+      border-radius: 0.625rem;
+      overflow: hidden;
+    }
+
+    &__img {
+      height: 100%;
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+      );
+      border-radius: 0.625rem;
+    }
+
+    &__title {
+      position: absolute;
+      bottom: 2.25rem;
+      left: 2.25rem;
+      padding-right: 2rem;
+      transition: display 0.3s ease;
+    }
+
+    &__content-container {
+      display: none;
+      transition: display 0.3s ease;
+    }
+    &__content {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1.75rem 2.5rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+
+      .promotion-card__share-button {
+        position: absolute;
+        right: 1.563rem;
+        top: 1.875rem;
+      }
+
+      .promotion-card__header {
+        padding-right: 2rem;
+      }
+
+      .promotion-card__underline {
+        width: 30%;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 1.5rem;
+      }
+
+      .promotion-card__desc {
+        font-size: 0.938rem;
+        margin-top: 1.5rem;
+      }
+
+      .promotion-card__button {
+        width: 100%;
+        height: 4.375rem;
+        border: 2px solid #fff;
+        color: var(--text-color);
+        font-size: 1.313rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transform-origin: center center;
+
+      .promotion-card__title {
+        display: none;
+      }
+
+      .promotion-card__content-container {
+        display: block;
+      }
+    }
+
+    //==============================Responsive==========================
+    @media (max-width: 48rem) {
+      width: 16.063rem !important;
+
+      &__content {
+        padding: 1rem 1.5rem 2.25rem !important;
+      }
+
+      &__title {
+        p {
+          font-size: 1.313rem;
+        }
+      }
+
+      &__header {
+        p {
+          font-size: 1.313rem;
+        }
+      }
+
+      &__share-button {
+        display: none;
+      }
+
+      &__underline {
+        margin-top: 0.75rem !important;
+      }
+
+      &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Số dòng tối đa */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 0.75rem !important;
+      }
+
+      &__button {
+        height: 2.813rem !important;
+        font-size: 0.75rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* CustomCheckbox.css */
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; /* Ẩn checkbox mặc định */
+}
+
+.custom-checkbox .custom-checkbox-mark {
+  width: 0.688rem;
+  height: 0.688rem;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-mark::after {
+  content: " ";
+  width: 0.42rem;
+  height: 0.42rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

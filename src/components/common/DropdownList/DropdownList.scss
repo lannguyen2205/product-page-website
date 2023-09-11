@@ -1,0 +1,21 @@
+.dropdown-list {
+  width: 100%;
+
+  &__content {
+    width: 100%;
+    padding: 0.5rem 0.4rem;
+    color: var(--text-primary-color);
+    font-size: 0.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.188rem;
+    background-color: transparent;
+    outline: none;
+  }
+
+  &__item {
+  }
+
+  select option {
+    padding: 0.25rem 0;
+  }
+}

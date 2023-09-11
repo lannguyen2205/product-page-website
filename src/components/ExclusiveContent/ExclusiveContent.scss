@@ -1,0 +1,55 @@
+.exclusive {
+  min-height: fit-content;
+  height: 100vh;
+
+  &__header {
+    padding: 11.688rem 3rem 2rem;
+
+    &-content {
+      height: 100%;
+      max-width: 64.25rem;
+      margin: 0 auto;
+    }
+  }
+
+  .exclusive__slider {
+    overflow: hidden;
+    padding: 2rem 0;
+    user-select: none;
+    scroll-behavior: smooth;
+
+    .slick-slide {
+      padding-right: 2rem;
+    }
+  }
+
+  //==============================Responsive==========================
+  @media (max-width: 48rem) {
+    height: fit-content;
+
+    &__header {
+      padding: 3.25rem 1.25rem 1rem;
+
+      &-content {
+        height: 100%;
+        max-width: 64.25rem;
+        margin: 0 auto;
+
+        .section-title {
+          font-size: 1.563rem;
+          line-height: 1.875rem;
+        }
+
+        .text-subtitle-l {
+          margin-top: 1rem;
+          font-size: 1.25rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* Số dòng tối đa */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

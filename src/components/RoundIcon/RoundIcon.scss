@@ -1,0 +1,40 @@
+.round-icon {
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    outline-width: 0.25rem;
+    outline-style: solid;
+    outline-color: rgba(255, 255, 255, 0.36);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+
+    svg {
+      g > path {
+        fill: var(--primary-color);
+      }
+    }
+
+    .share-icon {
+      g {
+        fill: var(--primary-color);
+        stroke: var(--primary-color);
+      }
+
+      path {
+        stroke: var(--primary-color);
+      }
+    }
+  }
+}

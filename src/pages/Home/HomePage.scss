@@ -1,0 +1,48 @@
+.home-page {
+  height: 100%;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    .spacing {
+      height: 0.25rem;
+    }
+  }
+
+  .sticky-icons {
+    position: fixed;
+    bottom: 6.875rem;
+    right: 5rem;
+  }
+
+  .hotspot,
+  .register,
+  .promotion,
+  .footer {
+    // height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .hotspot.session-active,
+  .register.session-active,
+  .promotion.session-active,
+  .footer.session-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  //==============================Responsive==========================
+  @media (max-width: 48rem) {
+    .sticky-icons {
+      bottom: 3.125rem;
+      right: 1.75rem;
+    }
+
+    .spacing {
+      height: 1px;
+    }
+  }
+}

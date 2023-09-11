@@ -1,0 +1,123 @@
+.hotspot {
+  &__banner {
+    color: var(--text-color);
+    width: 100%;
+    height: calc(100vh - 4.875rem);
+    padding: 0 3rem 3.125rem;
+    background-image: url("../../assets/image/banner.png");
+    background-size: cover;
+    background-position: center;
+
+    .banner__container {
+      height: 100%;
+      max-width: 64.25rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .banner__content {
+      max-width: 37.5rem;
+    }
+
+    .section-title {
+      color: var(--text-color);
+    }
+
+    .banner__typerate {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .banner__type {
+      font-size: 0.688rem;
+      font-weight: 500;
+    }
+
+    .banner_rate {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .banner__desc {
+      margin-top: 2.25rem;
+    }
+  }
+
+  &__download {
+    background-color: var(--session-background);
+    height: 4.875rem;
+    padding: var(--padding-general);
+
+    .download__content {
+      height: 100%;
+      max-width: 64.25rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .download__title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .download__store-list {
+      display: flex;
+      gap: 0.375rem;
+    }
+
+    .download__group-item {
+      display: flex;
+      gap: 0.375rem;
+    }
+  }
+
+  //==============================Responsive==========================
+  @media (max-width: 768px) {
+    &__banner {
+      height: 100vh;
+
+      .banner__desc {
+        font-size: 0.75rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &__download {
+      padding: 1.5rem 1.25rem;
+      height: auto;
+
+      .download__content {
+        flex-direction: column;
+      }
+
+      .download__title {
+        font-size: 1.563rem;
+      }
+
+      .download__store-list {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .download__store-item {
+        width: 100%;
+        max-width: 10.313rem;
+
+        img {
+          min-width: 9.375rem;
+          width: 100%;
+        }
+      }
+
+      .download__group-item {
+        justify-content: space-between;
+      }
+    }
+  }
+}
